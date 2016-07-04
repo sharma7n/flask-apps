@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+	<script src="{{ url_for('static', filename='script.js') }}" type=text/javascript></script>
+	{% if joke %}
+		<div class=setup><p>{{ joke.setup }}</p></div>
+		<div class=punchline><p>{{ joke.punchline }}</p></div>
+	{% else %}
+		<div class=nojokes><p>OH MY GOD! We ran out of JoJo jokes. Please come back later!</div>
+	{% endif %}
+{% endblock %}
